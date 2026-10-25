@@ -59,16 +59,9 @@
         }
     }
 
-    &__item:hover,
-    :focus {
+    &__item:hover {
         border: none;
-        outline: 2px solid $color-accent;
         border-radius: 1px;
-
-        .clients__link {
-            border-color: $color-accent;
-
-        }
 
         .clients__svg {
             fill: $color-accent;
@@ -85,6 +78,9 @@
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+        &:hover{
+            border-color: $color-accent;
+        }
 
         @media screen and (min-width: 480px) {
         }

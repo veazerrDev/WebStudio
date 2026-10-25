@@ -88,15 +88,13 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-delay: 0;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border: none;
             outline: 1px solid $color-accent;
 
         }
 
-        &:hover+.modal__svg,
-        &:focus+.modal__svg {
+        &:hover+.modal__svg {
             fill: $color-accent;
         }
     }
@@ -119,11 +117,6 @@
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-delay: 0;
-
-        &:focus {
-            border: none;
-            outline: 1px solid $color-accent;
-        }
     }
 
 
@@ -131,12 +124,6 @@
     &__checkbox {
         width: 16px;
         height: 15px;
-
-        &:focus {
-            border: none;
-            outline: 3px solid $color-accent;
-            border-radius: 1px;
-        }
     }
 
     &__text {
@@ -202,14 +189,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-
-        &:focus {
-            border: none;
-            outline: 3px solid $comand-svg;
-            border-radius: 1px;
-            background: $color-accent;
-            color: $main-background;
-        }
     }
 
     .form__close {
@@ -226,8 +205,7 @@
         top: 16px;
         right: 16px;
 
-        &:hover .close,
-        &:focus .close {
+        &:hover .close {
             fill: $color-accent;
             cursor: pointer;
         }

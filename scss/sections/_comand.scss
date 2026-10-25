@@ -1,158 +1,151 @@
-@import '../utils/placeholder';
-@import '../utils/mixin';
+@import "../utils/placeholder";
+@import "../utils/mixin";
 
 .comand {
-    background: $main-team;
-    padding-top: 60px;
-    padding-bottom: 60px;
+  background: $main-team;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    text-align: center;
+  }
+
+  &__title {
+    color: $text-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.16;
+      letter-spacing: 1.08px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__item {
+    width: 450px;
+    /* height: 622px; */
+    border: 1px;
+    background: $main-background;
+    flex-basis: calc(100%);
+    box-shadow:
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      width: 354px;
+      // height: 536px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+      width: 270px;
+      // height: 428px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  &__box {
+    padding-top: 30px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    color: $text-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
     text-align: center;
 
     @media screen and (min-width: 1200px) {
-        padding-top: 94px;
-        padding-bottom: 94px;
-        text-align: center;
+      line-height: 1.18;
     }
+  }
 
-    &__title {
-        color: $text-color;
-        font-family: "Roboto", sans-serif;
-        font-size: 28px;
-        font-weight: 700;
-        letter-spacing: 0.84px;
-        margin-bottom: 50px;
+  &__text {
+    color: $description-color;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 16px;
 
-        @media screen and (min-width: 1200px) {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 1.16;
-            letter-spacing: 1.08px;
-        }
+    @media screen and (min-width: 1200px) {
+      line-height: 1.18;
     }
+  }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
+  &__lest {
+    // justify-content: center;
+    // align-items: center;
+    @include flex-box($a: center, $b: center, $c: flex-start, $d: flex-start);
+    gap: 10px;
+  }
 
-        @media screen and (min-width: 1200px) {
-            flex-wrap: nowrap;
-        }
+  &__lenk {
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+    &:hover {
+      background-color: $color-accent;
+
+      .comand__svg {
+        fill: $main-background;
+      }
     }
+  }
 
-    &__item {
-        width: 450px;
-        /* height: 622px; */
-        border: 1px;
-        background: $main-background;
-        flex-basis: calc(100%);
-        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+  &__svg {
+    fill: $comand-svg;
+    width: 20px;
+    height: 20px;
 
-        @media screen and (min-width: 768px) {
-            flex-basis: calc((100% - 30px) / 2);
-            width: 354px;
-            // height: 536px;
-        }
-
-        @media screen and (min-width: 1200px) {
-            flex-basis: calc((100% - 90px) / 4);
-            width: 270px;
-            // height: 428px;
-        }
-    }
-
-    &__img {
-        width: 100%;
-    }
-
-    &__box {
-        padding-top: 30px;
-        padding-bottom: 24px;
-
-        @media screen and (min-width: 1200px) {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-    }
-
-    &__subtitle {
-        color: $text-color;
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: normal;
-        letter-spacing: 0.48px;
-        text-align: center;
-
-        @media screen and (min-width: 1200px) {
-            line-height: 1.18;
-        }
-    }
-
-    &__text {
-        color: $description-color;
-        font-family: "Roboto", sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 0.48px;
-        margin-top: 10px;
-        text-align: center;
-        margin-bottom: 16px;
-
-        @media screen and (min-width: 1200px) {
-            line-height: 1.18;
-        }
-    }
-
-    &__lest {
-        // justify-content: center;
-        // align-items: center;
-        @include flex-box($a: center, $b: center, $c: flex-start, $d: flex-start);
-        gap: 10px;
-    }
-
-    &__lenk {
-        padding: 12px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0;
-
-        &:focus {
-            border: none;
-            outline: 3px solid $color-accent;
-            border-radius: 50%;
-            background-color: $color-accent;
-
-            .comand__svg {
-                fill: $main-background;
-            }
-
-        }
-
-        &:hover {
-            background-color: $color-accent;
-
-            .comand__svg {
-                fill: $main-background;
-            }
-        }
-    }
-
-    &__svg {
-        fill: $comand-svg;
-        width: 20px;
-        height: 20px;
-
-        transition-property: fill;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0;
-    }
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+  }
 }

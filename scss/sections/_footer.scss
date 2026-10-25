@@ -54,11 +54,6 @@
             letter-spacing: 0.78px;
         }
 
-        &:focus {
-            border: none;
-            outline: 3px solid $color-accent;
-            border-radius: 1px;
-        }
     }
 
     &__span {
@@ -76,11 +71,6 @@
             @extend %foonts;
             width: 100%;
 
-            &:focus {
-                border: none;
-                outline: 3px solid $color-accent;
-                border-radius: 1px;
-            }
         }
 
         &__list {
@@ -104,12 +94,7 @@
             /* 171.429% */
             letter-spacing: 0.42px;
             margin-top: 9px;
-            
-            &:focus {
-                border: none;
-                outline: 3px solid $color-accent;
-                border-radius: 1px;
-            }
+        
         }
     }
 
@@ -211,12 +196,6 @@
         @media screen and (min-width: 1200px) {
             width: 358px;
         }
-
-        &:focus {
-            border: none;
-            outline: 3px solid $color-accent;
-            border-radius: 1px;
-        }
     }
 
     &__button {
@@ -237,14 +216,6 @@
 
         @media screen and (min-width: 1200px) {
             padding: 10px 28px;
-        }
-
-        &:focus {
-            border: none;
-            outline: 3px solid $color-accent;
-            border-radius: 1px;
-            background-color: $color-accent;
-            color: $main-background;
         }
     }
 
@@ -268,13 +239,6 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:focus {
-        border: none;
-        outline: 3px solid $color-accent;
-        border-radius: 50%;
-        background-color: $color-accent;
-    }
 
     &:hover {
         background-color: $color-accent;
